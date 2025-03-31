@@ -7,6 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Prerequisites
+- Download XAMPP
+- Download Composer
+- Download NodeJS
+
+## How to Run
+- Go to the installed XAMPP folder default = C:\xampp\php and open php.ini, then find ;extension=zip and change remove the semicolon
+- Open XAMPP and start Apache and MySQL
+- Then create a database after going to http://127.0.0.80/phpmyadmin/
+- After that git clone this project into a folder
+- Then Run "composer i", "npm i", "npm run build", in the terminal while cd'd into the project folder
+- Create a .env file inside the project directory and then copy contents from the .env.example into the .env file which u just created, after that configure database settings, in my case it was mysql as DB_CONNECTION and the DB_DATABASE should be the name of the database u created previously in the xampp mysql thing
+- Then do "php artisan migrate", in the terminal and this should create all the new tables in ur database
+- Finally do "php artisan serve" in the terminal to run the project. 
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

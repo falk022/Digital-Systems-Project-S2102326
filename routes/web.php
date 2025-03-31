@@ -68,4 +68,6 @@ route::get('/attend_message/{id}',[AdminController::class, 'attend_message']);
 
 route::get('/n_attended_message/{id}',[AdminController::class, 'n_attended_message']);
 
-route::get('/bookings?like=name,',[AdminController::class, 'sort_bookings']);
+
+
+Route::get('/search', [AdminController::class, 'search'])->name('search');

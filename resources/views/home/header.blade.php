@@ -38,6 +38,17 @@
                               @if (Route::has('login'))
                             
                                 @auth
+
+
+                                <!-- Check if user is an admin -->
+                                 @if (Auth::user()->usertype === 'admin')
+                                       <li class="nav-item">
+                                          <a class="nav-link" href="{{ url('/home') }}">
+                                             <i class="fas fa-cog"></i> Admin Dashboard
+                                          </a>
+                                       </li>
+                                 @endif
+                                 
                                  <!-- Account Dropdown -->
                                  <li class="nav-item dropdown">
                                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

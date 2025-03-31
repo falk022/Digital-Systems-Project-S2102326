@@ -270,4 +270,14 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query'); // Get the search term from input
+
+        // Perform search (replace 'name' with the field you want to search)
+        $results = Booking::where('email', 'LIKE', "%{$query}%")->get();
+
+        return view('admin.search_booking', compact('results', 'query'));
+    }
 }
