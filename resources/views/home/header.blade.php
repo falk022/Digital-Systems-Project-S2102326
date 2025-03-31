@@ -32,32 +32,47 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
-
                               
-                        @if (Route::has('login'))
-                           
-                                @auth
-                                 <x-app-layout>
-    
-                                 </x-app-layout>
-                                @else
+                              
 
-                                    <li class="nav-item" style="padding-right: 10px;">
+                              @if (Route::has('login'))
+                            
+                                @auth
+                                 <!-- Account Dropdown -->
+                                 <li class="nav-item dropdown">
+                                       <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          {{ Auth::user()->name }}
+                                       </a>
+                                       <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                                          <!-- Profile -->
+                                          <a class="dropdown-item" href="{{ route('profile.show') }}">
+                                             <i class="fas fa-user"></i> Profile
+                                          </a>
+
+                                          <!-- Jetstream has a built-in logout form -->
+                                          <form method="POST" action="{{ route('logout') }}">
+                                             @csrf
+                                             <button type="submit" class="dropdown-item">
+                                                   <i class="fas fa-sign-out-alt"></i> Logout
+                                             </button>
+                                          </form>
+                                       </div>
+                                 </li>
+                                @else
+                                <li class="nav-item" style="padding-right: 10px;">
                                        <a class="btn btn-success" href="{{url('login')}}">Login</a>
                                     </li>
 
                                     @if (Route::has('register'))
-
                                     <li class="nav-item">
                                        <a class="btn btn-primary" href="{{url('register')}}">Register</a>
                                     </li>
-
                                     @endif
                                 @endauth
                             
                         @endif
-
-
+                              
+                        
 
                            </ul>
                         </div>
