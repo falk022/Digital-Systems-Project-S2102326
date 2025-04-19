@@ -13,12 +13,12 @@
                   <div class="col-md-4">
                      <h3>Menu Link</h3>
                      <ul class="link_menu">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="room.html">Our Room</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li class="active"><a href="/">Home</a></li>
+                        
+                        <li><a href="{{url('our_rooms')}}">Our Room</a></li>
+                        <li><a href="{{url('hotel_gallery')}}">Gallery</a></li>
+                        
+                        <li><a href="{{url('contact_us')}}">Contact Us</a></li>
                      </ul>
                   </div>
                   <div class="col-md-4">
@@ -45,6 +45,8 @@
                         © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a>
                         <br><br>
                         Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                        <br><br>
+                        Edited by Hussain Farish Ismail S2102326
                         </p>
 
                      </div>

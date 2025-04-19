@@ -71,3 +71,7 @@ route::get('/n_attended_message/{id}',[AdminController::class, 'n_attended_messa
 
 
 Route::get('/search', [AdminController::class, 'search'])->name('search');
+
+route::get('/our_rooms',[HomeController::class, 'our_rooms']);
+route::get('/hotel_gallery',[HomeController::class, 'hotel_gallery']);
+route::get('/contact_us',[HomeController::class, 'contact_us']);

@@ -35,7 +35,7 @@
                         <h1>Book a Room Online</h1>
                         <form class="book_now">
                            <div class="row">
-                              <div class="col-md-12">
+                              <!-- <div class="col-md-12">
                                  <span>Arrival</span>
                                  <img class="date_cua" src="images/date.png">
                                  <input class="online_book" placeholder="dd/mm/yyyy" type="date" name="dd/mm/yyyy">
@@ -44,9 +44,11 @@
                                  <span>Departure</span>
                                  <img class="date_cua" src="images/date.png">
                                  <input class="online_book" placeholder="dd/mm/yyyy" type="date" name="dd/mm/yyyy">
-                              </div>
+                              </div> -->
                               <div class="col-md-12">
-                                 <button class="book_btn">Book Now</button>
+                                 <!-- <button class="book_btn">Book Now</button> -->
+                                 <a href="{{ url('our_rooms') }}" class="btn btn-success">Book Now</a>
+
                               </div>
                            </div>
                         </form>
