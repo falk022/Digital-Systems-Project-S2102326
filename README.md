@@ -8,9 +8,10 @@
 </p>
 
 ## Prerequisites
+- Download NodeJS
 - Download XAMPP
 - Download Composer
-- Download NodeJS
+
 
 ## How to Run
 - Go to the installed XAMPP folder default = C:\xampp\php and open php.ini, then find ;extension=zip and change remove the semicolon
@@ -20,6 +21,7 @@
 - Then Run "composer i", "npm i", "npm run build", in the terminal while cd'd into the project folder
 - Create a .env file inside the project directory and then copy contents from the .env.example into the .env file which u just created, after that configure database settings, in my case it was mysql as DB_CONNECTION and the DB_DATABASE should be the name of the database u created previously in the xampp mysql thing
 - Then do "php artisan migrate", in the terminal and this should create all the new tables in ur database
+- Then do “php artisan key:generate” in order to create an APP_KEY, which will then be automatically stored in that .env file which was created earlier.
 - Finally do "php artisan serve" in the terminal to run the project. 
 
 
